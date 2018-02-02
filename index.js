@@ -77,7 +77,7 @@ function SonosMQTTAPI(discovery, settings) {
   ]
   player_related_events.forEach(action =>
     discovery.on(action, player => {
-      let topic = `${settings.MQTT.prefix}${player.roomName.toLowerCase().split(" ").join(" ")}/${action}`
+      let topic = `${settings.MQTT.prefix}${player.roomName.toLowerCase().split(" ").join("")}/${action}`
       console.log("player Related: "+topic)
       console.log(JSON.stringify(player))
       client.publish(topic.toLowerCase(), JSON.stringify(player))
