@@ -1,0 +1,19 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "port": 5005,
+  "announceVolume": 40,
+  "MQTT": {
+    "connection": {
+      "url": "mqtt://127.0.0.1",
+      "username": "username",
+      "password": "password",
+      "clean": false,
+      "clientId": "sonos",
+      "keepalive": 10000,
+      "protocolId": "MQIsdp",   // Needed only for Mosquitto < 1.3
+      "protocolVersion": 3      // ""
+    },
+    "prefix": "sonos/"
+  }
+
+}
